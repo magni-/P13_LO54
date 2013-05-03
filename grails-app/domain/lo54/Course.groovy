@@ -1,24 +1,18 @@
 package lo54
 
 class Course {
-	
-	String id
+
+	String code
 	String title
 
+	static hasMany = [sessions: Session]
+
     static constraints = {
+		code blank: false, unique: true
 		title blank: false
     }
 	
 	static mapping = {
 		version false
-		id column: 'code', type: 'string', generator: 'assigned'
-	}
-	
-	void setCode(String username) {
-		id = username
-	}
-	
-	String setCode() {
-		return id
 	}
 }
