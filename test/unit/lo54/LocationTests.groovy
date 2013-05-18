@@ -1,7 +1,5 @@
 package lo54
 
-
-
 import grails.test.mixin.*
 import org.junit.*
 
