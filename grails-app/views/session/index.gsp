@@ -12,7 +12,7 @@
 					<th>Site</th>
 					<th>Start</th>
 					<th>End</th>
-					<th>Sign Up</th>
+					<th>Register</th>
 				</tr>
 			</thead>
 			<tbody>
