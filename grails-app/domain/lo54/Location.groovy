@@ -13,4 +13,6 @@ class Location {
 	static mapping = {
 		version false
 	}
+	
+	String toString() { return city }
 }

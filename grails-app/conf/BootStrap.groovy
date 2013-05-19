@@ -14,7 +14,7 @@ class BootStrap {
 			Location sevenans = new Location(city: "Sevenans")
 			sevenans.save(failOnError: true)
 
-			Location montbeliard = new Location(city: "Montb&eacute;liard")
+			Location montbeliard = new Location(city: "Montbéliard")
 			montbeliard.save(failOnError: true)
 
 			// Courses

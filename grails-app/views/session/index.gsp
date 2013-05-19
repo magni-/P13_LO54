@@ -2,32 +2,21 @@
 	<head>
 		<title>LO54 Project</title>
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}" type="text/css">
+		<calendar:resources lang="en" theme="tiger"/>
 	</head>
 	<body>
-		<table>
-			<thead>
-				<tr>
-					<th>Code</th>
-					<th>Title</th>
-					<th>Site</th>
-					<th>Start</th>
-					<th>End</th>
-					<th>Register</th>
-				</tr>
-			</thead>
-			<tbody>
-				<g:each in="${ss}" var="${s}">
-					<tr>
-						<td>${s.course.code}</td>
-						<td>${s.course.title}</td>
-						<td>${s.location.city}</td>
-						<td>${s.start.format("MMMM d, yyyy")}</td>
-						<td>${s.end.format("MMMM d, yyyy")}</td>
-						<td><a href="#">todo</a></td>
-					</tr>
-			</g:each>
-			</tbody>
-		</table>
-		<!-- form todo -->
+		<g:formRemote name="filter" update="index" url="[controller: 'Session', action:'index']">
+			<table>
+				<tr><td>Course Title:</td><td><g:textField name="title" /></td></tr>
+				<tr><td>Course City:</td><td><g:select name="city" from="${cities}" noSelection="${['':'']}" width="166px" /></td></tr>
+				<tr><td>Earliest Start Date:</td><td><calendar:datePicker name="start" format="%Y%m%d" /></td></tr>
+				<tr><td>Latest End Date:</td><td><calendar:datePicker name="end" format="%Y%m%d" /></td></tr>
+				<tr><td colspan="2"><g:actionSubmit value="Filter" action="index" /></td></tr>
+			</table>
+		</g:formRemote>
+		<br />
+		<div id="index">
+			<g:render template="list"></g:render>
+		</div>
 	</body>
 </html>

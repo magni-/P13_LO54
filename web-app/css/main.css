@@ -252,6 +252,14 @@ input, select, textarea {
 	padding: 0.2em 0.4em;
 }
 
+input, select {
+	width: 160px;
+    -ms-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+}
+
 select {
 	padding: 0.2em 0.2em 0.2em 0;
 }

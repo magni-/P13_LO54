@@ -18,12 +18,12 @@ class SessionController {
 				}
 			}
 			if (params.start) {
-				gt('start', new SimpleDateFormat('yyyyMMdd').parse(params.start))
+				gt('start', new SimpleDateFormat('MM/dd/yyyy').parse(params.start_value))
 			}
 			if (params.end) {
-				lt('end', new SimpleDateFormat('yyyyMMdd').parse(params.end))
+				lt('end', new SimpleDateFormat('MM/dd/yyyy').parse(params.end_value))
 			}
 		}
-		[ss: sessions]
+		[ss: sessions, cities: Location.list()]
 	}
 }
