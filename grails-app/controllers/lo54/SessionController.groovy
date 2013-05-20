@@ -4,6 +4,10 @@ import java.text.SimpleDateFormat
 
 class SessionController {
 
+	def filter() {
+		index()
+	}
+
     def index() {
 		def criteria = Session.createCriteria()
 		def sessions = criteria.list {
@@ -24,6 +28,6 @@ class SessionController {
 				lt('end', new SimpleDateFormat('MM/dd/yyyy').parse(params.end_value))
 			}
 		}
-		[ss: sessions, cities: Location.list()]
+		[ss: sessions, cities: Location.list(), client: new Client()]
 	}
 }

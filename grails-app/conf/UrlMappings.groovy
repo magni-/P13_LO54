@@ -9,6 +9,7 @@ class UrlMappings {
 
 		"/" {
 			controller = "session"
+			action = "filter"
 		}
 		"500"(view:'/error')
 	}

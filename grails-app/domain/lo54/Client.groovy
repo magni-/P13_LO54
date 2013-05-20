@@ -16,6 +16,7 @@ class Client {
 		address blank: false
 		phone blank: false
 		email nullable: true
+		lastname unique: ['firstname', 'session']
     }
 
 	static mapping = {
