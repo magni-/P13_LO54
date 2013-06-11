@@ -1,6 +1,14 @@
-# LO54 course project - Spring '13 - Groovy/Grails
+# LO54 course project
 
-Paul Mollet-Padier & Laurent Russier
+* Semester: Spring 2013
+* Subject: Groovy/Grails
+
+- - -
+
+## Contributors
+
+* [Paul Mollet-Padier](https://github.com/magni-)
+* [Laurent Russier](https://github.com/phoenixlr)
 
 ## Requirements
 
@@ -12,10 +20,10 @@ Paul Mollet-Padier & Laurent Russier
 
 * open up the terminal of your choice
 * create a MySQL database called <strong>lo54_dev</strong>
-* <strong>git clone</strong> this repository
+* run <strong>git clone https://github.com/magni-/P13_LO54.git</strong>
 * edit the <strong>grails-app/conf/DataSource.groovy</strong> file with your MySQL username and password
 
 ## Launch
 
 * <strong>cd</strong> into the project root directory
-* launch <strong>grails run-app</strong>
+* run <strong>grails run-app</strong>
