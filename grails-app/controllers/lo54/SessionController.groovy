@@ -28,6 +28,6 @@ class SessionController {
 				lt('end', new SimpleDateFormat('MM/dd/yyyy').parse(params.end_value))
 			}
 		}
-		[ss: sessions, cities: Location.list(), client: new Client()]
+		[ss: sessions, cities: Location.list(), newclient: new Client()]
 	}
 }

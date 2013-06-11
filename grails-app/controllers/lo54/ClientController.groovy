@@ -5,8 +5,6 @@ import grails.validation.ValidationException
 class ClientController {
 	
     def create() throws ValidationException {
-		println("in CC.create()")
-		
 		Client client = new Client(
 			firstname: params.firstname,
 			lastname:  params.lastname,
@@ -23,7 +21,7 @@ class ClientController {
 		    flash.error = "Error(s)!"
 		}	
 		finally {
-			redirect(controller: "session", action: "filter")
+			forward(controller: "session", action: "filter", model: [client: client])
 		}
 	}
 	

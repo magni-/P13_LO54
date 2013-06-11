@@ -9,11 +9,15 @@
 		<calendar:resources lang="en" theme="tiger"/>
 	</head>
 	<body>
-		<g:if test="${flash.error}">
-			<div class="alert alert-error" style="display: block">${flash.error}</div>
-		</g:if>
 		<g:if test="${flash.message}">
 			<div class="message" style="display: block">${flash.message}</div>
+		</g:if>
+		<g:if test="${flash.error}">
+			<div class="errors" style="display: block">${flash.error}
+				<g:hasErrors bean="${client}">
+				   <g:renderErrors bean="${client}" as="list" />
+				</g:hasErrors>
+			</div>
 		</g:if>
 		<g:formRemote name="filter" update="index" url="[controller: 'Session', action:'index']">
 			<table>

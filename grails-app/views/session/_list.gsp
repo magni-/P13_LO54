@@ -6,7 +6,7 @@
 			<th>Site</th>
 			<th>Start</th>
 			<th>End</th>
-			<th>Register</th>
+			<th></th>
 		</tr>
 	</thead>
 	<tbody>
@@ -17,7 +17,7 @@
 				<td>${s.location.city}</td>
 				<td>${s.start.format("MMMM d, yyyy")}</td>
 				<td>${s.end.format("MMMM d, yyyy")}</td>
-				<td><a href="#" id="session-${s.id}">todo</a></td>
+				<td><a href="#" id="session-${s.id}">Register</a></td>
 			</tr>
 		</g:each>
 	</tbody>

@@ -14,8 +14,8 @@ class Client {
 		lastname blank: false
 		firstname blank: false
 		address blank: false
-		phone blank: false
-		email nullable: true
+		phone blank: false, matches: "[0-9]+[x[0-9]+]?"
+		email nullable: true, email: true
 		lastname unique: ['firstname', 'session']
     }
 
