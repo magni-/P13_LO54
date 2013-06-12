@@ -27,3 +27,4 @@
 
 * <strong>cd</strong> into the project root directory
 * run <strong>grails run-app</strong>
+* open <strong>http://localhost:8080/fr.utbm.lo54.project/</strong> in the browser of your choice (developped on Firefox)
